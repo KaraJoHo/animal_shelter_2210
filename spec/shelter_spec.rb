@@ -57,7 +57,7 @@ RSpec.describe Shelter do
       end
     end
 
-  describe '#over_capacity' do
+  describe '#over_capacity?' do
       it 'returns true or false if venue has more patrons than cap' do
 
       shelter = Shelter.new('Denver Animal Shelter', 5)
@@ -65,7 +65,7 @@ RSpec.describe Shelter do
       shelter.add_pet('Beethoven')
       shelter.add_pet('Spot')
       shelter.add_pet('Jonesy')
-      expect(shelter.over_capacity).to eq(false)
+      expect(shelter.over_capacity?).to eq(false)
       end
     end
 end

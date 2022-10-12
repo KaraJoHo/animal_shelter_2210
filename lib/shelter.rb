@@ -21,6 +21,11 @@ class Shelter
   end
 
   def over_capacity?
+    if pets.length > capacity
+      true
+    elsif pets.length < capacity
+      false
+    end
   end
-  
+
 end

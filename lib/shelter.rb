@@ -12,8 +12,8 @@ class Shelter
     pets << pet_name
   end
 
-  def patrons
-    @pets
+  def patrons 
+    pets
   end
 
   def call_pets
@@ -21,11 +21,6 @@ class Shelter
   end
 
   def over_capacity?
-    if pets.length > capacity
-      true
-    elsif pets.length < capacity
-      false
-    end
+    pets.length > capacity
   end
-
 end
